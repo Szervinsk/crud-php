@@ -1,6 +1,7 @@
 <?php
 session_start();
-require 'config.php';
+require 'Config.php';
+$pdo = Config::getConexao();
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 

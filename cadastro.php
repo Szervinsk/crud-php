@@ -2,7 +2,8 @@
 // Adicione isto na primeira linha!
 session_start();
 
-require 'config.php';
+require 'Config.php';
+$pdo = Config::getConexao();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Dica de segurança: Use filter_input ou htmlspecialchars nos posts também

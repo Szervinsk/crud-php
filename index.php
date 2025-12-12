@@ -1,8 +1,11 @@
 <?php
 session_start();
-require 'config.php';
+require 'Config.php'; // carrega agora a classe
 
+$pdo = Config::getConexao();
 $sql = $pdo->query("SELECT * FROM usuarios");
+
+// lista de listas com todos os usuários
 $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 ?>

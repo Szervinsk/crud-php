@@ -1,7 +1,8 @@
 <?php 
 // 1. Iniciar Sessão (Obrigatório em TODOS os arquivos que usam $_SESSION)
 session_start();
-require 'config.php';
+require 'Config.php';
+$pdo = Config::getConexao();
 
 // Se o botão veio de um formulário POST, usamos INPUT_POST
 $id = filter_input(INPUT_POST, 'id');
